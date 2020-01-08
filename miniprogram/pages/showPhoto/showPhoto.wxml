@@ -1,0 +1,9 @@
+<view class='detailBox'>
+ <view class='items' wx:for="{{arr}}">
+ <view  class='itemImg1'>
+  <image src='{{item.path}}' class='itemImg' mode="aspectFit" bindtap="enlarge"  data-index="{{index}}"/>
+ </view>
+<text class='itemName'>{{item.title}}</text> 
+ </view>
+
+</view>

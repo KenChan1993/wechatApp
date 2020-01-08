@@ -1,0 +1,9 @@
+<!--miniprogram/pages/hero/demo.wxml-->
+<!-- <text>miniprogram/pages/hero/demo.wxml</text> -->
+<view class='imgDiv'>
+  <image src="{{url}}" class='imgs'></image>
+</view>
+<view class="tabName">{{cardTitle}}</view>
+<view class="list-item" style='witdh:100%;heigth:100%'>
+      <text class="black">{{msg}}</text>
+</view>

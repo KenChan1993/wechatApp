@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view wx:if="{{showMain}}">
+  <swiper indicator-dots="true" indicator-color="rgba(109, 214, 125, 0.67)"
+          autoplay="true" interval="2000" duration="1000" circular="true"> 
+        <block wx:for="{{queryResult}}"> 
+          <swiper-item bindtap="showTitle" data-id="{{item}}"> 
+          <view class="swiperDiv"> 
+            <image src="{{item.url}}" class="slide-image"/> 
+          </view>
+          </swiper-item> 
+        </block> 
+  </swiper>
+
+
+ <view class='tabText'>
+    嘘寒问暖不如打笔巨款
+  </view>
+
+<view class='detailBox'>
+  <view class='items' bindtap='goToShowPhoto'  >
+   满月照
+  </view> 
+ <view class='items' wx:for="{{arr}}">
+ <view  class='itemImg1'>
+  <image src='{{item.path}}' class='itemImg' mode="aspectFit" bindtap="enlarge"  data-index="{{index}}"/>
+ </view>
+<text class='itemName'>{{item.title}}</text> 
+ </view>
+ <view class='items' bindtap='testVideo'  >
+  东方闪电
+ </view> 
+</view>
+<view class="container">
+  <view class="history" bindtap="checkPsw">
+    <image src='../../images/footer-icon-03.png'/>
+  </view>
+  <view>
+  <text class='historyText' bindtap="checkPsw">管理</text>
+  </view>
+</view>
+</view> 
+<view wx:else>
+  <view class="btn-area">
+    <button bindtap="confirm">确定</button>
+
+    <button bindtap="cancel">取消</button>
+  </view>
+</view>
+
+
+<!-- 用户 openid -->
+  <!-- <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+         <button>{{userName}}</button>
+    </view>
+  </view> -->
+
+
+ <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传图片</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+
+  <!-- 操作数据库 -->
+  <!-- <view class="uploader">
+    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+      <text>前端操作数据库</text>
+    </navigator>
+  </view> -->
+
+  <!-- 新建云函数
+  <view class="uploader">
+    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+      <text>快速新建云函数</text>
+    </navigator>
+  </view> -->
+
+
