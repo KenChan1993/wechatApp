@@ -1,9 +1,9 @@
 <view class="section tc">
-  <video id="myVideo" src="cloud://demo-c63857.6465-demo-c63857-1258170672/oS4Ye0TWZEEkzJpFWUc-BDZuoaQk/videos/oneYearOld.mp4"
+  <video id="myVideo" style="width:750rpx;" src="cloud://demo-c63857.6465-demo-c63857-1258170672/oS4Ye0TWZEEkzJpFWUc-BDZuoaQk/videos/oneYearOld.mp4"
    danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
-  <view class="btn-area">
+  <!-- <view class="btn-area">
     <button bindtap="bindButtonTap">获取视频</button>
     <input bindblur="bindInputBlur"/>
     <button bindtap="bindSendDanmu">发送弹幕</button>
-  </view>
+  </view> -->
 </view>
